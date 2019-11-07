@@ -43,7 +43,7 @@ struct
         fun prefix   []     = Id.toString id
           | prefix(id::ids) = StrId.toString id ^ "." ^ prefix ids
       in
-        prefix strids
+        "\"" ^ (prefix strids) ^ "\""
       end
 
   fun strengthen(strid, (strids, id)) = (strid::strids, id)
