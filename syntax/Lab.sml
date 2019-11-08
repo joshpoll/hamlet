@@ -15,7 +15,7 @@ struct
 
   (* Conversions *)
 
-  fun toString s   = s
+  fun toString s   = "\"" ^ s ^ "\""
   fun fromString s = s
   fun fromInt i    = Int.toString i
   fun toInt lab    = Int.fromString lab
